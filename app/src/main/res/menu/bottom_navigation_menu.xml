@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/messageItem"
+        android:title="Message"
+        android:icon="@drawable/ic_profile" />
+    <item
+        android:id="@+id/tripsItem"
+        android:title="Trips"
+        android:icon="@drawable/ic_location" />
+    <item
+        android:id="@+id/favoriteItem"
+        android:title="Favorite"
+        android:icon="@drawable/ic_profile" />
+    <item
+        android:id="@+id/hostsItem"
+        android:title="Hosts"
+        android:icon="@drawable/ic_location" />
+</menu>
