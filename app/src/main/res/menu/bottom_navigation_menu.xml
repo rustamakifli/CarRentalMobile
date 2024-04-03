@@ -1,18 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
+
     <item
-        android:id="@+id/messageItem"
+        android:id="@+id/message"
         android:title="Message"
-        android:icon="@drawable/ic_profile" />
+        android:icon="@drawable/ic_message"/>
+
     <item
-        android:id="@+id/tripsItem"
+        android:id="@+id/trips"
         android:title="Trips"
-        android:icon="@drawable/ic_location" />
+        android:icon="@drawable/ic_trips"/>
+
     <item
-        android:id="@+id/favoriteItem"
+        android:id="@+id/fab"
+        android:title=""
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/favorite"
         android:title="Favorite"
-        android:icon="@drawable/ic_profile" />
+        android:icon="@drawable/ic_heart"/>
+
     <item
-        android:id="@+id/hostsItem"
-        android:title="Hosts"
-        android:icon="@drawable/ic_location" />
+        android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_pp"/>
+
 </menu>
