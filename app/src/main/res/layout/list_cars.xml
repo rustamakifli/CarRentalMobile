@@ -1,11 +1,11 @@
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     app:cardCornerRadius="8dp"
     android:background="@color/white"
-    android:orientation="horizontal">
+    android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -14,7 +14,7 @@
         android:background="@color/white">
 
         <ImageView
-            android:id="@+id/carImageView"
+            android:id="@+id/carListImageView"
             android:layout_width="200dp"
             android:layout_height="120dp"
             android:scaleType="centerCrop" />
@@ -26,7 +26,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/nameTextView"
+                android:id="@+id/nameListTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="1dp"
@@ -36,7 +36,7 @@
                 />
 
             <TextView
-                android:id="@+id/detailsTextView"
+                android:id="@+id/detailsListTextView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
@@ -58,7 +58,7 @@
                 android:layout_gravity="center_vertical" />
 
             <TextView
-                android:id="@+id/nameSeatView"
+                android:id="@+id/nameListSeatView"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -70,7 +70,7 @@
                 />
 
             <TextView
-                android:id="@+id/namePriceText"
+                android:id="@+id/nameListPriceText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="12sp"
