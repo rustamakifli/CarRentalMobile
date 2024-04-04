@@ -1,4 +1,5 @@
 package com.example.myapplication
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,6 +34,12 @@ class CarAdapter : RecyclerView.Adapter<CarAdapter.CarViewHolder>() {
             detailsTextView.text = "${car.brand}, ${car.model}, ${car.year}"
             nameSeatView.text = "${car.transmission} seats"
             namePriceText.text = "${car.price} $/day"
+            println("iddddddddd: ${car.id}")
+            itemView.setOnClickListener {
+                val intent = Intent(itemView.context, SingleCarActivity::class.java)
+                intent.putExtra("carId", car.id)
+                itemView.context.startActivity(intent)
+            }
         }
     }
 

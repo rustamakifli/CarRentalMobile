@@ -43,7 +43,6 @@ class HomeActivity : AppCompatActivity() {
 
         recyclerView.adapter = adapter
         listrecyclerView.adapter = listAdapter
-        println("listadapter: $listAdapter")
 
         val brandRecyclerView: RecyclerView = findViewById(R.id.brandRecyclerView)
         val layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
