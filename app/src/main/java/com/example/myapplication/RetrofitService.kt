@@ -10,7 +10,7 @@ interface RetrofitService {
 
 // RetrofitClient.kt
 object RetrofitClient {
-    private const val BASE_URL = "http://104.248.138.80/"
+    private const val BASE_URL = "http://138.68.111.59/"
 
     private val retrofit by lazy {
         Retrofit.Builder()
