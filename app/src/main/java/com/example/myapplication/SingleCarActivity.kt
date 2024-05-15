@@ -41,7 +41,7 @@ class SingleCarActivity : AppCompatActivity() {
     }
 
     private fun fetchDataFromApi(carId: String?) {
-        val apiUrl = "http://104.248.138.80/api/v1/cars/$carId"
+        val apiUrl = "http://139.162.147.132/api/v1/cars/$carId"
         val jsonObjectRequest = JsonObjectRequest(
             Request.Method.GET, apiUrl, null,
             { response ->

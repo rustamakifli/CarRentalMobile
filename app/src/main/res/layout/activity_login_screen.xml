@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:paddingHorizontal="10dp"
+    tools:context=".LoginScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="7dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:gravity="center"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/design_default_color_primary"
+            android:textFontWeight="900"
+            android:textSize="30dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:gravity="center"
+            android:text="Welcome back you’ve been missed!"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="900"
+            android:textSize="15dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <EditText
+            android:id="@+id/editTextTextEmailAddress"
+            android:layout_width="match_parent"
+            android:layout_height="64sp"
+            android:layout_marginBottom="10sp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textEmailAddress"
+            android:paddingHorizontal="10sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="106dp"
+            tools:layout_editor_absoluteY="267dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="64sp"
+            android:background="@drawable/rounded_edittext"
+            android:ems="10"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:paddingHorizontal="10sp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="100dp"
+            tools:layout_editor_absoluteY="336dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginVertical="20sp"
+            android:text="Forgot your password?"
+            android:textColor="@color/design_default_color_primary" />
+
+        <Button
+            android:id="@+id/loginButton"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/button_background"
+            android:text="Sign In"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="164dp"
+            tools:layout_editor_absoluteY="430dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginVertical="20sp"
+            android:text="Create new account"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="45sp"
+                android:text="Or continue with"
+                android:textColor="@color/design_default_color_primary" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:src="@drawable/social_media" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -87,6 +87,7 @@
                 android:background="@drawable/rounded_edittext"
                 android:drawableStart="@drawable/ic_search"
                 android:queryHint="Search for any car"
+                android:textColorHint="@color/black"
                 android:padding = "8dp"
                 android:iconifiedByDefault="false"
                 android:layout_marginBottom="8dp"
@@ -153,6 +154,9 @@
                     android:layout_below="@id/recyclerView"
                     android:paddingTop="8dp"
                     android:layout_margin="10dp"/>
+            <LinearLayout
+                android:layout_width="100dp"
+                android:layout_height="100dp"/>
         </LinearLayout>
     </ScrollView>
     <!--    navigation bottom-->

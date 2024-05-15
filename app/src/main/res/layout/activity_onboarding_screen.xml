@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="80sp"
+    tools:context=".OnboardingScreen">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:padding="16sp"
+        android:layout_marginVertical="100dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="116dp">
+
+        <ImageView
+            android:layout_width="360dp"
+            android:layout_height="360dp"
+            android:maxWidth="100sp"
+            android:maxHeight="100sp"
+            android:src="@drawable/on_boarding_img"
+            tools:ignore="ContentDescription,MissingConstraints" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="10sp"
+            android:gravity="center"
+            android:text="Discover Your Dream Car here"
+            android:textColor="@color/design_default_color_primary"
+            android:textFontWeight="900"
+            android:textSize="35dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10sp"
+            android:gravity="center"
+            android:text="Explore all the existing car rentals based on your interest and you pleasures"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textFontWeight="400"
+            android:textSize="14dp"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="168dp"
+            tools:layout_editor_absoluteY="202dp" />
+
+
+        <Button
+            android:id="@+id/goLoginScreenButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/button_background"
+            android:text="Login"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="164dp"
+            tools:layout_editor_absoluteY="430dp" />
+
+        <Button
+            android:id="@+id/goRegisterScreenButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10sp"
+            android:background="@drawable/button_background"
+            android:text="Register"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="164dp"
+            tools:layout_editor_absoluteY="430dp" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

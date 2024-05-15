@@ -72,8 +72,11 @@ dependencies {
 
     implementation(libs.androidx.coordinatorlayout)
     implementation(libs.volley)
+    implementation(libs.androidx.activity)
+    implementation(libs.androidx.constraintlayout)
     annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
     implementation ("com.google.android.material:material:1.4.0")
+    implementation("androidx.core:core-splashscreen:1.0.1")
 
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.appcompat)
