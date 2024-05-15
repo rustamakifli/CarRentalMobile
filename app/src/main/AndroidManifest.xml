@@ -30,15 +30,14 @@
             android:exported="false" />
         <activity
             android:name=".LoginScreen"
-            android:exported="false" />
-        <activity
-            android:name=".SplashScreen"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
+
         <activity
             android:name=".RegisterScreen"
             android:exported="false" />
         <activity
-            android:name=".HomeActivity"
+            android:name=".SplashScreen"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>
@@ -46,6 +45,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".HomeActivity"
+            android:theme="@style/AppTheme" />
         <activity
             android:name=".SingleCarActivity"
             android:theme="@style/AppTheme" />
