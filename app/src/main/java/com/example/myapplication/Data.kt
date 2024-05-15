@@ -1,5 +1,6 @@
 package com.example.myapplication
 
+//car data
 data class Car(
     val id: Int,
     val name: String,
@@ -23,3 +24,5 @@ data class CarImage(
     val image: String,
     val isMain: Boolean
 )
+// login token
+data class LoginResponse(val token: String)
