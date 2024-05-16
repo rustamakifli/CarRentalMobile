@@ -2,6 +2,7 @@ package com.example.myapplication
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.coroutines.CoroutineScope
@@ -9,7 +10,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import com.google.android.material.bottomnavigation.BottomNavigationView
-
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var recyclerView: RecyclerView
@@ -27,6 +29,10 @@ class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        runBlocking {
+            installSplashScreen()
+            delay(1500)
+        }
         setContentView(R.layout.activity_home)
 
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
