@@ -1,6 +1,7 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
@@ -72,8 +73,10 @@ class LoginScreen : AppCompatActivity() {
         call.enqueue(object : Callback<LoginResponse> {
             override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
                 if (response.isSuccessful) {
+                    println(response)
                     val token = response.body()?.token
-
+                    println(token)
+                    saveToken(token)
                     startActivity(Intent(this@LoginScreen, HomeActivity::class.java))
                     finish()
                 } else {
@@ -86,5 +89,12 @@ class LoginScreen : AppCompatActivity() {
                 Toast.makeText(this@LoginScreen, "Login failed: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+    private fun saveToken(token: String?) {
+        val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+        println("saved")
+        editor.putString("token", token)
+        editor.apply()
     }
 }

@@ -78,6 +78,8 @@ dependencies {
     implementation ("com.google.android.material:material:1.4.0")
     implementation("androidx.core:core-splashscreen:1.0.1")
     implementation("androidx.core:core-splashscreen:1.0.0")
+    implementation ("com.airbnb.android:lottie:4.2.0")
+
     implementation(libs.androidx.recyclerview)
     implementation(libs.androidx.appcompat)
     testImplementation(libs.junit)

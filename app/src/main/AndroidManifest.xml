@@ -21,17 +21,24 @@
             android:exported="false" />
         <activity
             android:name=".VerificationScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".CreateNewPasswordScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".ForgotPasswordScreen"
             android:exported="false"
             android:theme="@style/AppTheme"/>
         <activity
+            android:name=".ProfileScreen"
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
+        <activity
             android:name=".OnboardingScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".LoginScreen"
             android:exported="true"
