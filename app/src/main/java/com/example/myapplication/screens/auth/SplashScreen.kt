@@ -1,10 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.screens.auth
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
 import androidx.appcompat.app.AppCompatActivity
+import com.example.myapplication.R
 
 @SuppressLint("CustomSplashScreen")
 class SplashScreen : AppCompatActivity() {

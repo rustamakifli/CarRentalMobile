@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.screens.auth
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -12,12 +12,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.myapplication.api_services.ApiService
+import com.example.myapplication.screens.main_screens.HomeActivity
+import com.example.myapplication.R
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import android.widget.TextView
+import com.example.myapplication.data.LoginResponse
 
 class LoginScreen : AppCompatActivity() {
 

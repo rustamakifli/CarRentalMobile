@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.myapplication" >
+    package="com.example.myapplication">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -15,42 +15,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@android:style/Theme.Holo.NoActionBar.Fullscreen"
-        tools:targetApi="31" >
+        tools:targetApi="31">
         <activity
-            android:name=".RequestBookScreen"
-            android:exported="false" />
-        <activity
-            android:name=".VerificationScreen"
+            android:name=".screens.main_screens.FavoriteScreen"
             android:exported="false"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".CreateNewPasswordScreen"
+            android:name=".screens.main_screens.RequestBookScreen"
             android:exported="false"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".ForgotPasswordScreen"
+            android:name=".screens.auth.VerificationScreen"
             android:exported="false"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".ProfileScreen"
+            android:name=".screens.auth.CreateNewPasswordScreen"
             android:exported="false"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".OnboardingScreen"
+            android:name=".screens.auth.ForgotPasswordScreen"
             android:exported="false"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".LoginScreen"
+            android:name=".screens.main_screens.ProfileScreen"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".screens.main_screens.OnboardingScreen"
+            android:exported="false"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".screens.auth.LoginScreen"
             android:exported="true"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".RegisterScreen"
+            android:name=".screens.auth.RegisterScreen"
             android:exported="true"
-            android:theme="@style/AppTheme"/>
+            android:theme="@style/AppTheme" />
         <activity
-            android:name=".SplashScreen"
+            android:name=".screens.auth.SplashScreen"
             android:exported="true"
-            android:theme="@style/AppTheme" >
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -58,10 +63,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".HomeActivity"
+            android:name=".screens.main_screens.HomeActivity"
             android:theme="@style/AppTheme" />
         <activity
-            android:name=".SingleCarActivity"
+            android:name=".screens.main_screens.SingleCarActivity"
             android:theme="@style/AppTheme" />
 
         <meta-data

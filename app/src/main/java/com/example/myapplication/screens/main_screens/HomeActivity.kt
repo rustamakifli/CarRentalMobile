@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.screens.main_screens
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
@@ -6,6 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.myapplication.R
+import com.example.myapplication.api_services.RetrofitClient
+import com.example.myapplication.adapters.BrandAdapter
+import com.example.myapplication.adapters.CarAdapter
+import com.example.myapplication.adapters.CarListAdapter
+import com.example.myapplication.data.Brand
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -41,6 +47,10 @@ class HomeActivity : AppCompatActivity() {
         bottomNavigationView.menu.getItem(2).isEnabled = false
         bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
             when (menuItem.itemId) {
+                R.id.favorite -> {
+                    startActivity(Intent(this, FavoriteScreen::class.java))
+                    true
+                }
                 R.id.profile -> {
                     startActivity(Intent(this, ProfileScreen::class.java))
                     true
@@ -79,7 +89,6 @@ class HomeActivity : AppCompatActivity() {
                 }
             } catch (e: Exception) {
                 Log.e("HomeActivity", "Failed to load cars: ${e.message}")
-                // Handle error, show message to user, etc.
             }
         }
     }
@@ -92,7 +101,6 @@ class HomeActivity : AppCompatActivity() {
                 }
             } catch (e: Exception) {
                 Log.e("HomeActivity", "Failed to load cars: ${e.message}")
-                // Handle error, show message to user, etc.
             }
         }
     }

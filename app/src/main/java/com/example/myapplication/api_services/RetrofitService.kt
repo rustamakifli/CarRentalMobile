@@ -45,7 +45,9 @@
 //}
 
 
-package com.example.myapplication
+package com.example.myapplication.api_services
+import com.example.myapplication.data.Car
+import com.example.myapplication.data.LoginResponse
 import retrofit2.http.GET
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

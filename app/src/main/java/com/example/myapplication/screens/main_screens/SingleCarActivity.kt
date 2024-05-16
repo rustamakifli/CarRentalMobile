@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.screens.main_screens
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -12,9 +12,12 @@ import androidx.appcompat.widget.Toolbar
 import com.android.volley.Request
 import com.android.volley.RequestQueue
 import com.android.volley.toolbox.JsonObjectRequest
+import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
+import com.example.myapplication.R
 import com.squareup.picasso.Picasso
 import org.json.JSONException
+import org.json.JSONObject
 
 class SingleCarActivity : AppCompatActivity() {
 
@@ -94,5 +97,35 @@ class SingleCarActivity : AppCompatActivity() {
         onBackPressed()
         return true
     }
+    // needs to update wishlist add
+//    private fun addCarToFavorites(carId: String) {
+//        val accessToken = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE2NDQ1MDA5LCJpYXQiOjE3MTU4NDAyMDksImp0aSI6ImUzM2Y0NTZmOWFiMjRjNDc4ODYxOTMwYTljYjY0MDRlIiwiZW1haWwiOiJtcmt6Z3NtdkBnbWFpbC5jb20ifQ.6mq267o-_tzIQiE92sd8RAEa3rMe5lzGZLkn6kZNPr0"
+//        val apiUrl = "http://139.162.147.132/api/v1/wishlist/"
+//
+//        val stringRequest = object : StringRequest(Method.POST, apiUrl,
+//            { response ->
+//                Toast.makeText(this, "Car added to favorites", Toast.LENGTH_SHORT).show()
+//            },
+//            { error ->
+//                println("Error: $error")
+//                Toast.makeText(this, "Error adding car to favorites", Toast.LENGTH_SHORT).show()
+//            }) {
+//            override fun getHeaders(): MutableMap<String, String> {
+//                val headers = HashMap<String, String>()
+//                headers["Authorization"] = "Bearer $accessToken"
+//                return headers
+//            }
+//
+//            override fun getParams(): MutableMap<String, String> {
+//                val params = HashMap<String, String>()
+//                params["car_id"] = carId
+//                return params
+//            }
+//        }
+//
+//        val queue: RequestQueue = Volley.newRequestQueue(this)
+//        queue.add(stringRequest)
+//    }
+
 
 }

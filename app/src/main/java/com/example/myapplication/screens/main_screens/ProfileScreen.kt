@@ -1,12 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.screens.main_screens
 
 import android.content.Context
 import android.os.Bundle
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.Glide
-import com.google.android.material.card.MaterialCardView
+import com.example.myapplication.R
 import okhttp3.*
 import org.json.JSONObject
 import java.io.IOException
@@ -19,7 +18,6 @@ class ProfileScreen : AppCompatActivity() {
         val sharedPreferences = getSharedPreferences("MyPrefs", Context.MODE_PRIVATE)
         val token = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE2NDQ1MDA5LCJpYXQiOjE3MTU4NDAyMDksImp0aSI6ImUzM2Y0NTZmOWFiMjRjNDc4ODYxOTMwYTljYjY0MDRlIiwiZW1haWwiOiJtcmt6Z3NtdkBnbWFpbC5jb20ifQ.6mq267o-_tzIQiE92sd8RAEa3rMe5lzGZLkn6kZNPr0"
 
-        // Use token for API calls, if needed
         token?.let { fetchUserProfile(it) }
     }
 
