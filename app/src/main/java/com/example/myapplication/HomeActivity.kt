@@ -1,4 +1,5 @@
 package com.example.myapplication
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
@@ -38,6 +39,15 @@ class HomeActivity : AppCompatActivity() {
         val bottomNavigationView = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
         bottomNavigationView.background = null
         bottomNavigationView.menu.getItem(2).isEnabled = false
+        bottomNavigationView.setOnNavigationItemSelectedListener { menuItem ->
+            when (menuItem.itemId) {
+                R.id.profile -> {
+                    startActivity(Intent(this, ProfileScreen::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
 
         recyclerView = findViewById(R.id.recyclerView)
         listrecyclerView = findViewById(R.id.carListRecyclerView)
