@@ -1,7 +1,9 @@
 package com.example.myapplication
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
@@ -20,6 +22,7 @@ class SingleCarActivity : AppCompatActivity() {
     private lateinit var carNameTextView: TextView
     private lateinit var carPriceTextView: TextView
     private lateinit var carCompanyTextView: TextView
+    private lateinit var requestToBookButton: Button
 
     @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,10 +37,18 @@ class SingleCarActivity : AppCompatActivity() {
         carImageView = findViewById(R.id.carSingleImageView)
         carNameTextView = findViewById(R.id.carNameTextView)
         carPriceTextView = findViewById(R.id.carPriceTextView)
+        requestToBookButton = findViewById<Button>(R.id.bookNowButton)
+
+
 
         val carId = intent.getIntExtra("carId", -1)
         println("caridd: $carId")
         fetchDataFromApi(carId.toString())
+
+        requestToBookButton.setOnClickListener {
+            val intent = Intent(this, RequestBookScreen::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun fetchDataFromApi(carId: String?) {
@@ -47,6 +58,7 @@ class SingleCarActivity : AppCompatActivity() {
             { response ->
                 println("API Response: $response")
                 try {
+
                     val carName = response.getString("name")
                     val carPrice = response.getString("price")
                     val carImages = response.getJSONArray("car_images")
