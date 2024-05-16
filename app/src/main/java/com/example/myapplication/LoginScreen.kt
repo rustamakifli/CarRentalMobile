@@ -1,7 +1,9 @@
 package com.example.myapplication
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -14,7 +16,7 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-
+import android.widget.TextView
 
 class LoginScreen : AppCompatActivity() {
 
@@ -22,6 +24,7 @@ class LoginScreen : AppCompatActivity() {
     private lateinit var passwordEditText: EditText
     private lateinit var loginButton: Button
 
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -36,6 +39,7 @@ class LoginScreen : AppCompatActivity() {
         passwordEditText = findViewById(R.id.editTextTextPassword)
         loginButton = findViewById(R.id.loginButton)
 
+
         loginButton.setOnClickListener {
             val email = emailEditText.text.toString().trim()
             val password = passwordEditText.text.toString().trim()
@@ -48,7 +52,14 @@ class LoginScreen : AppCompatActivity() {
             login(email, password)
         }
     }
+    fun onCreateForgotPass(view: View) {
+        startActivity(Intent(this, ForgotPasswordScreen::class.java))
+    }
+    fun onCreateAccountClicked(view: View) {
+        println("Create account clicked")
 
+        startActivity(Intent(this, RegisterScreen::class.java))
+    }
     private fun login(email: String, password: String) {
         val retrofit = Retrofit.Builder()
             .baseUrl("http://139.162.147.132/api/v1/")

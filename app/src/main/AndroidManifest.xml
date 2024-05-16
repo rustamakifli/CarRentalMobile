@@ -24,7 +24,8 @@
             android:exported="false" />
         <activity
             android:name=".ForgotPasswordScreen"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".OnboardingScreen"
             android:exported="false" />
@@ -35,7 +36,8 @@
 
         <activity
             android:name=".RegisterScreen"
-            android:exported="false" />
+            android:exported="true"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".SplashScreen"
             android:exported="true"
